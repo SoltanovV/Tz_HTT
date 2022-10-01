@@ -1,4 +1,5 @@
-﻿
+﻿namespace Tz_HTT.Model.Entity;
+
 /// <summary>
 /// Товар
 /// </summary>

@@ -8,7 +8,7 @@ public class Category
     /// <summary>
     /// Id категории
     /// </summary>
-    public int Id { get; set; } 
+    public int Id { get; set; }
 
     /// <summary>
     /// Название категории

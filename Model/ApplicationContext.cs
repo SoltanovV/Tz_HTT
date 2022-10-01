@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Tz_HTT.Model.Entity;
-
-namespace Tz_HTT.Model;
+﻿namespace Tz_HTT.Model;
 
 public class ApplicationContext : DbContext
 {

@@ -1,6 +1,6 @@
 const URL = 'https://localhost:7214/Product'
 
-const container = document.querySelector('table.listUrl');
+const container = document.querySelector('table.listProduct');
 
 getData(URL)
 
