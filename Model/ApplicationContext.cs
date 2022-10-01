@@ -11,7 +11,7 @@ public class ApplicationContext : DbContext
     public ApplicationContext(DbContextOptions<ApplicationContext> options)
         : base(options)
     {
-        //Database.EnsureDeleted();
+        Database.EnsureDeleted();
         Database.EnsureCreated();
     }
 
@@ -68,6 +68,7 @@ public class ApplicationContext : DbContext
 
         var categories = new List<Category>() { category1, category2, category3 };
 
+        //Заполнение таблиц данными по умолчанию
         modelBuilder.Entity<Product>().HasData(products);
         modelBuilder.Entity<Category>().HasData(categories);
 

@@ -1,7 +1,10 @@
 const URL = 'https://localhost:7214/Product'
 
 const container = document.querySelector('table.listUrl');
+
 getData(URL)
+
+
 function getData(url){
     fetch(url)
         .then(res => {

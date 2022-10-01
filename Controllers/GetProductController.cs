@@ -12,6 +12,7 @@ namespace Tz_HTT.Controllers
             _db = db;
             _logger = logger;
         }
+
         [HttpGet]
         [Route("Product")]
         public async Task<IActionResult> GetProduct()
@@ -23,6 +24,7 @@ namespace Tz_HTT.Controllers
                                                p => p.Id,
                                                c => c.Id,
                                                (p, c) => new {Id = p.Id, Name = p.Name, Price = p.Price, Category = c.NameCategory });
+
                 _logger.LogInformation("Запрос GetProduct выполнен");
 
                 return Ok(result);
