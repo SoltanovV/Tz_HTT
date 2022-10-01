@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Diagnostics;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,13 +12,6 @@ builder.Services.AddMvc();
 string connections = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connections));
 
-builder.Services.AddCors(opions =>
-{
-    opions.AddPolicy("CorsPolicy", policy =>
-    {
-        policy.AllowAnyOrigin();
-    });
-});
 var app = builder.Build();
 
 app.UseRouting();
